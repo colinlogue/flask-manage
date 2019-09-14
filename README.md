@@ -20,5 +20,5 @@ This package is intended to solve two problems:
 Installing the package will add a script to the system path to create
 a new project directory from the template:
 ```shell
-flask-com new project
+flask-manage newproject
 ```
