@@ -1,5 +1,5 @@
-# Flask-Com
-Flask-Com is a set of common templates and configuration options
+# Flask-Manage
+Flask-Manage is a set of common templates and configuration options
 that I use to make starting a flask project really easy.
 This is (currently, at least) very much tailored to my idiosyncrasies,
 but I will try to keep it well documented so it can be availabe, if
@@ -15,3 +15,10 @@ This package is intended to solve two problems:
     different projects.
 2.  Allow easy loading of modules that will just work, without
     having to manually configure each time I add one.
+
+## Usage
+Installing the package will add a script to the system path to create
+a new project directory from the template:
+```shell
+flask-com new project
+```
