@@ -1,0 +1,20 @@
+[package]
+name = "flask-manage"
+version = "0.0.9"
+license = "MIT"
+description = "Build flask projects from the command line."
+author = "Colin Logue"
+author_email = "colinlogue@gmail.com"
+url = "https://github.com/colinlogue/flask-manage"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[dependencies]
+python = ">=3.6"
+flask = ">=1.0"
+
+[dev-dependencies]
+twine = ">=1.14"
