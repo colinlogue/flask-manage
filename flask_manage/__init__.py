@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from .manage import newproject
+from flask_manage.commands import newproject
 
 def main(argv=None):
     parser = ArgumentParser(
@@ -20,3 +20,6 @@ def main(argv=None):
     else:
         args = parser.parse_args()
     args.func(args)
+
+def register_modules(app):
+    pass
