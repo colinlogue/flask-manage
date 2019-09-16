@@ -5,3 +5,4 @@
 build/
 dist/
 instance/
+!flask_manage/project_template/app/instance/
