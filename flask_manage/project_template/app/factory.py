@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_manage import register_modules
+from flask_manage.core import register_modules
 
 
 
