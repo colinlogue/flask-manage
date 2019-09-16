@@ -1,6 +1,5 @@
 [package]
 name = "flask-manage"
-version = "0.0.1-dev4"
 license = "MIT"
 description = "Build flask projects from the command line."
 author = "Colin Logue"
@@ -13,7 +12,7 @@ classifiers = [
 ]
 
 [dependencies]
-python = ">=3.6"
+python = ">=3.7"
 flask = ">=1.0"
 
 [dev-dependencies]

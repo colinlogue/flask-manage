@@ -1,7 +1,7 @@
 import os
 import setuptools
 import toml
-
+from flask_manage import __version__
 
 def read_file(filepath):
     with open(filepath) as f:
@@ -21,6 +21,7 @@ pkg_settings = {
     },
     'long_description': read_file('README.md'),
     'long_description_content_type': 'text/markdown',
+    'version': __version__,
 }
 
 pkg_settings.update(proj_config['package'])
