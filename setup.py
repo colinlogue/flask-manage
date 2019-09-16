@@ -4,7 +4,6 @@ import toml
 
 
 def read_file(filepath):
-    dirname = os.path.dirname(__file__)
     with open(filepath) as f:
         return f.read()
 
