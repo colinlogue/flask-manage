@@ -20,5 +20,17 @@ This package is intended to solve two problems:
 Installing the package will add a script to the system path to create
 a new project directory from the template:
 ```shell
-flask-manage newproject
+flask-manage newproject proj_name
 ```
+That's sort of all that it does at the moment.
+
+## To-do
+Eventually it should be able to manage a set of modules that can have
+their own blueprints, templates, static files, etc. These templates
+should be registered automatically if they have the right requirements
+(a `register(app)` function, at a minimum).
+
+## Core module
+A special module called `core` provides some base templates and layouts
+and is installed automatically (can be disabled with `--nocore` flag
+when calling `newproject`.
