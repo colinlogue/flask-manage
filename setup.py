@@ -16,7 +16,7 @@ pkg_settings = {
     'include_package_data': True,
     'entry_points': {
         'console_scripts': [
-            'flask-manage = flask_manage.manage:main',
+            'flask-manage = flask_manage:main',
         ],
     },
     'long_description': read_file('README.md'),
