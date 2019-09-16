@@ -17,7 +17,7 @@ This package is intended to solve two problems:
     having to manually configure each time I add one.
 
 ## Usage
-Installing the package will add a script to the system path to create
+Installing the package will enable a script to create
 a new project directory from the template:
 ```shell
 flask-manage newproject proj_name
