@@ -7,10 +7,6 @@ from flask_manage import PROJECT_TEMPLATE_PATH
 
 TEMPLATE_EXTS = ['.j2']
 
-def ignore_pycache(current_dir, contents):
-    return ['__pycache__']
-
-
 def setup_parser(parser):
     parser.add_argument(
         'label',
@@ -48,6 +44,7 @@ def copy_template_dir(src, dest, root=None, env=None, context=None, ignore=None)
                 # otherwise, copy
                 src_root, src_ext = os.path.splitext(src_path)
                 if src_ext in TEMPLATE_EXTS:
+                    dest_path, _ = os.path.splitext(dest_path)
                     rel_src_path = os.path.relpath(src_path, src)
                     template = env.get_template(rel_src_path)
                     with open(dest_path, 'w') as f:
@@ -57,7 +54,10 @@ def copy_template_dir(src, dest, root=None, env=None, context=None, ignore=None)
 
 def execute(args):
     dest = os.path.join(args.dest, args.label)
+    os.mkdir(dest)
     src = os.path.join(PROJECT_TEMPLATE_PATH)
-    shutil.copytree(src, dest, ignore=ignore_pycache)
-    # walk files and replace all .j2.py with .py by rendering templates
-    copy_template_dir(src, dest, context, ignore=['__pycache__'])
+    copy_template_dir(
+        src,
+        dest,
+        context=vars(args),
+        ignore=['__pycache__'])
